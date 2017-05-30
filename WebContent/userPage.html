@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Registration</title>
+<style>
+body {
+	background-color: #93B874
+}
+</style>
+<link rel="stylesheet"
+	href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+<script
+	src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script
+	src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.7/jquery.validate.min.js"></script>
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+<script type="text/javascript" src="./listExpenses.js"></script>
+<script type="text/javascript" src="./addExpenses.js"></script>
+
+</head>
+<body>
+	<div id="userLoginPage">
+		<h2>Welcome To Expense Tracker</h2>
+		<div id="expenseForTheWeek">
+			Expenses for the last week were <span id="lastWeekTotal"></span>
+		</div>
+		<div>
+			<table id="displayExpensesTable" border=2></table>
+		</div>
+		<div>
+			<input type="button" name="backToExpenses" id="backToExpenses"
+				value="Back">
+		</div>
+		<div id="update">
+			<table id = "updateTable">
+			 <tr> <td id = "txId"> Enter tx Id to update<input type = "number" name = "updateId" id = "updateId" min="1"
+            max="99999"></td>
+			   <td id = "txAmount">Amount to update <input type = "number" name = "updateAmount" id = "updateAmount" min="1"
+            max="99999"></td>
+          <td><input type="button" name="updateExpense" id="updateExpense"
+      value="Update Expense"></td>
+			 </tr>
+			</table>
+			</div>
+			<div id = "delete">
+			<table id = "deleteExpenseTable">
+       <tr> <td id = "deleteTxId"> Enter tx Id to delete<input type = "number" name = "deleteId" id = "deleteId" min="1"
+            max="99999"></td>
+          <td><input type="button" name="deleteExpense" id = "deleteExpense" value = "Delete Expense"></td>
+       </tr>
+      </table>
+		</div>
+
+		<form id="listExpensesForm" method="get" action="nowhere.html">
+			<div id="listExpenses">
+				<h3>List Expenses</h3>
+				<table>
+					<tr>
+						<td><label for="syncDataStartDate" class="cell">Start
+								Date</label></td>
+						<td><input type="text" id="startDate" name="startDate"></td>
+					</tr>
+					<tr>
+						<td><label for="syncDataEndDate" class="cell">End
+								Date</label></td>
+						<td><input type="text" id="endDate" name="endDate"></td>
+					</tr>
+					<tr>
+						<td><input type="button" name="register"
+							id="listExpensesButton" value="List Expenses"></td>
+				</table>
+			</div>
+		</form>
+
+		<div id="addExpenses">
+			<h3>Add Expenses</h3>
+			<table>
+				<tr>
+					<td>Item:</td>
+					<td><input type="text" name="item" id="item"></td>
+				</tr>
+				<tr>
+					<td>Amount:</td>
+					<td><input type="number" name="amount" id="amount" min="1"
+						max="99999"></td>
+				</tr>
+				<tr>
+					<td><input type="button" name="addExpense"
+						id="addExpensesButton" value="Add"></td>
+			</table>
+		</div>
+	</div>
+
+	<div id="logoutButton">
+		<input type="button" id="logout" value="Logout">
+	</div>
+</body>
+</html>
+
