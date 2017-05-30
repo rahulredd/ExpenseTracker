@@ -22,6 +22,12 @@
 1. Admin user access.
 2. Integration testing using automated tools. 
 
+## Highlights
+1. Completely abstracting out the underlying database using Hibernate.
+2. Establishing OneToMany relationship between User table and Expense table.
+3. Using in memory db (h2) for testing.
+4. Strictly following MVC architecture. 
+
 ##  Tools and Technologies Used
 1. Hibernate 5.0
 2. Junit 4.8
